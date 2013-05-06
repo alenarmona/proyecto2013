@@ -1,0 +1,29 @@
+﻿Build started 05/05/2013 11:42:58 p.m..
+     1>Project "C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\KIMBOX.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\include /I..\..\..\..\..\..\..\Desarrollo\cinder_0.8.5_vc2012\include /I..\..\..\..\..\..\..\Desarrollo\cinder_0.8.5_vc2012\boost /I..\..\..\..\..\..\..\Desarrollo\cinder_0.8.5_vc2012\blocks\KinectSDK\src /I"C:\Program Files\Microsoft SDKs\Kinect\v1.7\\inc" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D NOMINMAX /D _WIN32_WINNT=0x0502 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\KIMBOXApp.cpp
+         KIMBOXApp.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\KIMBOX.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\..\..\..\..\..\..\Desarrollo\cinder_0.8.5_vc2012\lib /LIBPATH:..\..\..\..\..\..\..\Desarrollo\cinder_0.8.5_vc2012\lib\msw /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v1.7\\lib\x86" cinder_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comsuppw.lib Kinect10.lib /NODEFAULTLIB:LIBCMT /NODEFAULTLIB:LIBCPMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\KIMBOX.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\KIMBOX.lib" /MACHINE:X86 Debug\Resources.res
+         Debug\KIMBOXApp.obj
+         Debug\Kinect.obj
+     1>cinder_d.lib(zutil.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(zutil.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(trees.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(trees.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(inftrees.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(inftrees.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(inflate.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(inflate.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(inffast.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(inffast.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(deflate.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(deflate.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(crc32.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(crc32.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(compress.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(compress.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+     1>cinder_d.lib(adler32.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'cinder_d.lib(adler32.obj)' or at 'C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\vc100.pdb'; linking object as if no debug info
+         KIMBOX.vcxproj -> C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\KIMBOX.exe
+       PostBuildEvent:
+         xcopy /y "C:\Program Files\Microsoft SDKs\Kinect\v1.7\\Assemblies\*.dll" "C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\Debug\"
+         :VCEnd
+         C:\Program Files\Microsoft SDKs\Kinect\v1.7\\Assemblies\Microsoft.Kinect.dll
+         1 File(s) copied
+     1>Done Building Project "C:\Users\Ale\Documents\GitHub\Proyecto2013\KIMBOX\vc11\KIMBOX.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:24.15
