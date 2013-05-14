@@ -9,6 +9,15 @@
 #include "cinder/Utilities.h"
 #include "Kinect.h"
 
+#include <iostream>
+#include <cstdlib>
+#include "RtMidi.h"
+
+#if defined(__WINDOWS_MM__)
+  #include <windows.h>
+  #define SLEEP( milliseconds ) Sleep( (DWORD) milliseconds ) 
+#endif
+
 
 using namespace ci;
 using namespace ci::app;
@@ -39,6 +48,9 @@ private:
 
 	// Save screenshot
 	void								screenShot();
+
+	//MIDI
+	RtMidiOut							*rtmidi;
 
 };
 
@@ -90,6 +102,8 @@ void KIMBOXApp::draw()
 					Vec3f destination	= skeletonIt->find( startJoint )->second.getPosition();
 					destination.z		*= -1.0f;
 					gl::drawLine( position, destination );
+					
+					gl::drawString( "HELLO!", Vec2i::zero() );
 				}
 
 				// Draw joint
@@ -99,6 +113,8 @@ void KIMBOXApp::draw()
 				glLineWidth( 0.5f );
 				gl::color( ColorAf::white() );
 				gl::drawVector( position, position + direction, 0.05f, 0.01f );
+
+				
 
 			}
 
@@ -152,19 +168,40 @@ void KIMBOXApp::setup()
 
 	// Start Kinect
 	mKinect = Kinect::create();
-	mKinect->start( DeviceOptions().enableDepth( false ).enableColor( false ) );
+	mKinect->start( DeviceOptions().enableDepth( true ).enableColor( true ) );
 	mKinect->removeBackground();
 
 	// Set the skeleton smoothing to remove jitters. Better smoothing means
 	// less jitters, but a slower response time.
 	mKinect->setTransform( Kinect::TRANSFORM_SMOOTH );
-
+	
 	// Add callback to receive skeleton data
 	mCallbackId = mKinect->addSkeletonTrackingCallback( &KIMBOXApp::onSkeletonData, this );
 
 	// Set up camera
 	mCamera.lookAt( Vec3f( 0.0f, 0.0f, 2.0f ), Vec3f::zero() );
 	mCamera.setPerspective( 45.0f, getWindowAspectRatio(), 0.01f, 1000.0f );
+
+	//Set up MIDI
+	rtmidi = new RtMidiOut(RtMidi::Api::WINDOWS_MM);
+	if(rtmidi->getPortCount() > 0)
+	{
+		std::string portName;
+		portName = rtmidi->getPortName(1); //hacer configurable
+		rtmidi->openPort(1);
+	}
+
+	
+	 //std::vector<unsigned char> message;
+
+	  // RtMidiOut constructor
+	 // try {
+		//midiout = new RtMidiOut();
+	 // }
+	 // catch ( RtError &error ) {
+		////error.printMessage();
+		////exit( EXIT_FAILURE );
+	 // }
 
 }
 
